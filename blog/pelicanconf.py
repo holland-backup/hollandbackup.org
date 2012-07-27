@@ -6,7 +6,7 @@ SITENAME = u"Holland Backup Manager"
 SITESUBTITLE = u"Backed the #$%& Up!"
 SITEURL = 'http://hollandbackup.org'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'America/Chicago'
 
 DEFAULT_LANG = 'en'
 
