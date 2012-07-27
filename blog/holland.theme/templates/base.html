@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+    <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+    {% if FEED_RSS %}
+    <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    <!--[if IE]>
+    <style type="text/css"> 
+    .twoColFixRtHdr #mainContent { zoom: 1; }
+    </style>
+    <![endif]-->
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1><a href="{{ SITEURL }}">{{ SITENAME }}</h1>
+            {% if SITESUBTITLE %}<h2>{{ SITESUBTITLE }}</h2>{% endif %}
+        </div><!-- end #header -->
+        <div id="topMenu">
+            <ul>
+                {% for name, link in MENUITEMS %}
+                <li><a href="{{ link }}">{{name}}</a></li>
+                {% endfor %}     
+                {% if DISPLAY_PAGES_ON_MENU %}
+                {% for p in PAGES %}
+        <li>
+        <a {% if p == page %}class="active" {% endif %}href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+        </li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </div><!-- end #topMenu -->
+        <div id="sidebar">
+            <ul id="sidebar-items">
+                <li id="search">
+                    <form method="get" id="searchform" action="hollandbackup.org">
+                        <div>
+                            <input type="text" value="" name="s" id="s" />
+                            <input type="submit" id="searchsubmit" value="Search" />
+                        </div>
+                    </form>
+                </li>
+                <li id="recent-posts">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                    {% for article in articles[:5] %}
+                        <li>
+                            <a href="{{ article.url }}">{{ article.title }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            <li id="mailing-lists">
+                <h3>Mailing Lists</h3>
+                <ul>
+                    <li>
+                        <a href="http://launchpad.net/~holland-discuss">
+                            General Discussion
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://launchpad.net/~holland-coredev">
+                            Core Developers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://launchpad.net/~holland-build">
+                            Build Notifications
+                        </a>
+                    </li>      
+                </ul>
+            </li>
+            <li id="misc-items">
+                <h3>IRC</h3>
+                <a href="irc://irc.freenode.net/#hollandbackup">
+                    irc.freenode.net / #hollandbackup
+                </a>
+            </li>
+        </div><!-- end #sidebar -->
+        <div id="mainContent">
+            {% block content %}
+            {% endblock %}
+        </div><!-- end #mainContent -->
+
+        <div class="clearfloat"></div>
+
+        <div id="footer">
+            <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+        </div><!-- end #footer -->
+    </div><!-- end #container -->
+    {% include 'analytics.html' %}
+</body>
+</html>
