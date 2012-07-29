@@ -199,11 +199,22 @@ ol {
 	font-size: 16px;
 }
 
-.blogItem div.nav-above {
+#nav-above, #nav-below {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.navigation a:hover {
+	background: none;
+	color: #ce5c00;
+}
+
+#nav-above {
 	margin-bottom: 18px;
 }
 
-.blogItem div.nav-below {
+
+#nav-below {
 	margin-top: 18px;
 }
 

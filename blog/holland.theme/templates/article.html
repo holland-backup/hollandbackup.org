@@ -4,7 +4,7 @@
 
 
 <div class="blogItem">
-    <div class="nav-above">
+    <div id="nav-above" class="navigation">
     {% for a in articles %}
     {% if a == article %}
     {% if not loop.last %}
@@ -25,7 +25,7 @@
     {% endfor %}
     </div>
 
-    <div class="clear-float">
+    <div>
     <h2>{{ article.title }}</h2>
     <h3>Posted on {{ article.locale_date }} by {{ article.author }}</h3>
         {{ article.content }}   
@@ -36,7 +36,7 @@
     </h3>
     </div>
 
-    <div class="nav-below">
+    <div id="nav-below" class="navigation">
     {% for a in articles %}
     {% if a == article %}
     {% if not loop.last %}
