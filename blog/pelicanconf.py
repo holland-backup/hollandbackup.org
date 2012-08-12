@@ -4,7 +4,21 @@
 AUTHOR = u"Holland Core Team"
 SITENAME = u"Holland Backup Manager"
 SITESUBTITLE = u"Backed the #$%& Up!"
-SITEURL = 'http://hollandbackup.org'
+SITEURL = u'http://hollandbackup.org'
+
+ARTICLE_URL = u'{date:%Y}/{date:%m}/{category}/{slug}'
+ARTICLE_SAVE_AS = u'{date:%Y}/{date:%m}/{category}/{slug}'
+
+PAGE_URL = u'{slug}'
+PAGE_SAVE_AS = u'{slug}'
+
+TAG_URL = u'tag/{slug}'
+TAG_SAVE_AS = u'tag/{slug}'
+
+AUTHOR_URL = u'author/{slug}'
+AUTHOR_SAVE_AS = u'author/{slug}'
+
+ABORT_ON_SLUG_CONFLICT = True
 
 TIMEZONE = 'America/Chicago'
 
@@ -15,6 +29,7 @@ MENUITEMS = [
     ('News', SITEURL),
     ('Docs', 'http://docs.hollandbackup.org'),
     ('Wiki', 'http://wiki.hollandbackup.org'),
+    ('Archives', 'archives'),
 ]
 
 # Blogroll
@@ -33,4 +48,8 @@ DEFAULT_CATEGORY = 'Communication'
 
 THEME = 'holland.theme'
 
-CLEAN_URLS = False
+#CLEAN_URLS = True
+
+RELATIVE_URLS = False
+
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search'))
