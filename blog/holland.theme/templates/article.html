@@ -9,14 +9,14 @@
     {% if a == article %}
     {% if not loop.last %}
     <span class="nav-prev">
-        ← <a href="{{articles[loop.index0 + 1].url }}">
+	    ← <a href="{{ SITEURL }}/{{articles[loop.index0 + 1].url }}">
             {{ articles[loop.index0 + 1].title }}
           </a>
     </span>
     {% endif %}
     {% if not loop.first %}
     <span class="nav-next">
-        <a href="{{ articles[loop.index0 - 1].url }}">
+	    <a href="{{ SITEURL }}/{{ articles[loop.index0 - 1].url }}">
             {{ articles[loop.index0 - 1].title }} →
         </a>
     </span>
@@ -41,14 +41,14 @@
     {% if a == article %}
     {% if not loop.last %}
     <span class="nav-prev">
-        ← <a href="{{articles[loop.index0 + 1].url }}">
+	    ← <a href="{{ SITEURL }}/{{articles[loop.index0 + 1].url }}">
             {{ articles[loop.index0 + 1].title }}
           </a>
     </span>
     {% endif %}
     {% if not loop.first %}
     <span class="nav-next">
-        <a href="{{ articles[loop.index0 - 1].url }}">
+	    <a href="{{ SITEURL }}/{{ articles[loop.index0 - 1].url }}">
             {{ articles[loop.index0 - 1].title }} →
         </a>
     </span>

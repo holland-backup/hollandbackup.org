@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+    <base href="{{ SITEURL}}" />
     <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
     {% if FEED_RSS %}
@@ -38,9 +39,9 @@
         <div id="sidebar">
             <ul id="sidebar-items">
                 <li id="search">
-                    <form method="get" id="searchform" action="hollandbackup.org">
+                    <form method="get" id="searchform" action="search">
                         <div>
-                            <input type="text" value="" name="s" id="s" />
+                            <input type="text" value="" name="query" id="s" />
                             <input type="submit" id="searchsubmit" value="Search" />
                         </div>
                     </form>
@@ -77,9 +78,13 @@
             </li>
             <li id="misc-items">
                 <h3>IRC</h3>
-                <a href="irc://irc.freenode.net/#hollandbackup">
-                    irc.freenode.net / #hollandbackup
-                </a>
+                <ul>
+                    <li>
+                        <a href="irc://irc.freenode.net/#hollandbackup">
+                            irc.freenode.net / #hollandbackup
+                        </a>
+                    </li>
+                </ul>
             </li>
         </div><!-- end #sidebar -->
         <div id="mainContent">
