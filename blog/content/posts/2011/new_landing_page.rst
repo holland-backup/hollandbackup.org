@@ -1,6 +1,7 @@
 New Landing Page
 ################
 
+:slug: new-landing-page
 :date: 2011-06-16 00:00
 :tags: Communication
 :author: Tim

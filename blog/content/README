@@ -1,0 +1,6 @@
+This directory contains content for blog posts and static pages on the Holland
+website - www.hollandbackup.org
+
+Blog posts should go in posts/{YEAR} and are in reStructure Text format.
+
+Static pages that are not posts should go under pages.

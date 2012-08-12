@@ -1,6 +1,7 @@
 Ramping Up to 1.1.0
 ###################
 
+:slug: ramping-up-to-holland-amsterdam
 :date: 2011-06-06 00:00
 :tags: Development
 :author: Holland Core Team

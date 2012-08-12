@@ -1,13 +1,14 @@
 hollandbackup.org is now in the Rackspace Cloud!
 ################################################
 
-:date: 2012-07-27 13:16
+:slug: holland-backup-in-rackspace-cloud
+:date: 2012-08-09 01:00
 :tags: Communication
 :author: Holland Core Team
 
 Both `docs.hollandbackup.org`_ and `hollandbackup.org`_ have been moved to
-`Rackspace Cloud Files`_ for less maintenance headaches on the core
-team and added reliability and access.
+`Rackspace Cloud Files`_.  This should provide better response times, more
+reliable access and less maintenance for the Holland Core Team.
 
 .. _docs.hollandbackup.org: http://docs.hollandbackup.org
 .. _hollandbackup.org: http://hollandbackup.org
