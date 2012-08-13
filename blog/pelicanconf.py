@@ -53,3 +53,6 @@ THEME = 'holland.theme'
 RELATIVE_URLS = False
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search'))
+
+for template in DIRECT_TEMPLATES:
+    globals()[template.upper() + '_SAVE_AS'] = template
