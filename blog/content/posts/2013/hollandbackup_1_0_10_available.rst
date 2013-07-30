@@ -24,7 +24,7 @@ include:
 
  **Routines and Events Now Default for mysqldump** 
 
- mysqldump will now use the --routines and --events options by default
+ mysqldump will now use the ``--routines`` and ``--events`` options by default
  if the version of MySQL supports these features.
 
  **mysqldump: Now With More Failure**
