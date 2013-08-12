@@ -30,6 +30,7 @@ MENUITEMS = [
     ('Docs', 'http://docs.hollandbackup.org'),
     ('Wiki', 'http://wiki.hollandbackup.org'),
     ('Archives', 'archives'),
+    ('Download', 'http://download.opensuse.org/repositories/home:/holland-backup/'),
 ]
 
 # Blogroll
